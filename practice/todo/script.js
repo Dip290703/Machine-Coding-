@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
             todoSubmit.innerText = "+Add"
             editmode = false
             editItem = null
-        }else{
+        }else{ 
             addTodo(todoText)
         }
         todoInput.value = ""

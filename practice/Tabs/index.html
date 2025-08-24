@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla JS Tabs</title>
+  <style>
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .tab {
+      padding: 8px 16px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background: #f5f5f5;
+    }
+    .tab.active {
+      background: #007bff;
+      color: #fff;
+    }
+    .tab-content {
+      display: none;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" data-target="content1">Tab 1</div>
+    <div class="tab" data-target="content2">Tab 2</div>
+    <div class="tab" data-target="content3">Tab 3</div>
+  </div>
+
+  <div id="content1" class="tab-content active">This is Content 1</div>
+  <div id="content2" class="tab-content">This is Content 2</div>
+  <div id="content3" class="tab-content">This is Content 3</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
