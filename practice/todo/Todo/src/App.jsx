@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import TodoItem from './components/TodoItem'
+import Tabs from './components/Tabs';
 
 const App = () => {
  const [task, setTask] = useState("");
@@ -36,7 +37,8 @@ const App = () => {
   }
   return (
      <div className="container">
-      <div className="todo-box">
+      <div className="todo-box"  style={{padding:"20px",marginBottom:"200px"
+     }}>
         <h1>Todo App</h1>
 
         {/* ✅ Use form for better accessibility */}
@@ -56,6 +58,12 @@ const App = () => {
             onEdit = {handleEdit} />
           ))}
         </ul>
+      </div>
+
+
+
+      <div style={{padding:"20px"}}>
+        <Tabs />
       </div>
     </div>
   );
