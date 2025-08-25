@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import TodoItem from './components/TodoItem'
 import Tabs from './components/Tabs';
+import Accordian from './components/Accordian';
 
 const App = () => {
  const [task, setTask] = useState("");
@@ -62,8 +63,11 @@ const App = () => {
 
 
 
-      <div style={{padding:"20px"}}>
+      <div style={{padding:"20px" , marginBottom:"200px"}}>
         <Tabs />
+      </div>
+      <div style={{padding:"20px"}}>
+        <Accordian />
       </div>
     </div>
   );
