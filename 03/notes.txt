@@ -1,0 +1,26 @@
+const accordionContainer = document.getElementById("accordion");
+
+// Render accordion items dynamically
+accordionData.forEach((item) => {
+  const accordionItem = document.createElement("div");
+  accordionItem.classList.add("accordion-item");
+
+  accordionItem.innerHTML = `
+    <button class="accordion-header">${item.title}</button>
+    <div class="accordion-content">
+      <p>${item.content}</p>
+    </div>
+  `;
+
+  accordionContainer.appendChild(accordionItem);
+});
+
+// Add toggle functionality
+const headers = document.querySelectorAll(".accordion-header");
+
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+  });
+});
